@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Tweet } from '../typings'
+import { Tweet, Comment } from '../typings'
 import TimeAgo from 'react-timeago'
 import {
     ChatAlt2Icon,
@@ -20,7 +20,6 @@ function Tweet({ tweet }: Props) {
         const comments: Comment[] = await fetchComments(tweet._id)
         setComments(comments)
     }
-
 
     useEffect(() => {
         refreshComments()
