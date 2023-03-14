@@ -1,9 +1,0 @@
-{
-    "version": 2,
-    "builds": [
-      {
-        "use": "@vercel/node@18.12.1"
-      }
-    ]
-  }
-  
