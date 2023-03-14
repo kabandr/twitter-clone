@@ -17,7 +17,7 @@ function Tweet({ tweet }: Props) {
     const [comments, setComments] = useState<Comment[]>([])
 
     const refreshComments = async () => {
-        const comments: Comment[] = await fetchComments(tweet._id)
+        const comments = await fetchComments(tweet._id) as unknown as Comment[]
         setComments(comments)
     }
 
